@@ -1,13 +1,19 @@
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
         List<Integer> nums = new ArrayList<>(List.of(1, 8, 2, 3, 4, 4, 5, 5, 6, 7));
+        List<String> words= new ArrayList<>(List.of(
+                "Повторюсь", "в","отраженьях", "зеркал",
+                "Повторюсь", "в", "эхе", "собственных", "мыслей",
+                        "Повторюсь",  "в", "слове", "что", "вслух", "сказал",
+                "И", "в", "стихах", "став", "их", "сути", "частицей"
+        ));
         printOddNumbers(nums);
         printEvenSortNumbers(nums);
+        printWords(words);
 
 
 
@@ -31,6 +37,18 @@ public class Main {
         }
         Collections.sort(nums2);
         System.out.println(nums2);
+
+    }
+    public static void printWords(List<String> words) {
+
+        List<String> words2=new ArrayList<>();
+        for (String word : words) {
+            if (!words2.contains(word)) {
+                words2.add(word);
+            }
+        }
+
+        System.out.println(words2);
 
     }
 
